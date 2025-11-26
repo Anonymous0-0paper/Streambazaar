@@ -19,16 +19,6 @@ streambazaar/
 │   ├── metrics.py          # Evaluation metrics tracking
 │   ├── scheduler.py         # Main scheduler implementation
 │   └── baselines.py        # Baseline scheduler implementations
-├── evaluation/             # Evaluation components
-│   ├── __init__.py
-│   ├── plots.py            # Evaluation plot generation (20+ plots)
-│   ├── applications.py     # Application simulators
-│   └── scalability_evaluation.py # Scalability evaluation with different tenant counts
-├── visualization/          # Visualization components
-│   ├── __init__.py
-│   └── plotter.py          # Plotting functionality
-├── output/                 # Generated plots (created when running visualizations)
-├── evaluation_results/     # Scalability evaluation results (CSV files and plots)
 ├── main.py                 # Main demo script
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
@@ -220,5 +210,6 @@ The code follows a modular design where each component is separated into its own
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
+
 
 This implementation is based on the StreamBazaar paper by Younesi et al.
