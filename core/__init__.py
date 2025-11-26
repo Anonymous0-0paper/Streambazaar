@@ -1,0 +1,3 @@
+"""
+StreamBazaar Core Package
+"""

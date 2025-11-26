@@ -1,0 +1,39 @@
+# Device Definitions and Pricing Configuration
+
+# Resource types
+resource_types:
+  - cpu
+  - memory
+  - network
+
+# Device categories
+device_categories:
+  - low_power
+  - standard
+  - high_performance
+
+# Device definitions - matching paper specifications
+devices:
+  # Haswell nodes from the paper (CHI@UC site on Chameleon Cloud)
+  haswell_node:
+    category: high_performance
+    resources:
+      cpu: 24  # 2× Intel Xeon E5-2670 v3 (24 cores total)
+      memory: 128  # GB DDR4 ECC
+      network: 10  # Gbps Ethernet (bonded dual-port)
+    base_price:
+      cpu: 0.05  # per core per hour
+      memory: 0.02  # per GB per hour
+      network: 0.08  # per Gbps per hour
+    power_consumption: 200.0  # watts (typical for Haswell servers)
+
+# Pricing models
+pricing_models:
+  linear:
+    factor: 1.0
+  exponential:
+    base: 1.5
+  dynamic:
+    utilization_threshold: 0.8
+    over_utilization_multiplier: 2.0
+    under_utilization_multiplier: 0.5

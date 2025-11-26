@@ -1,0 +1,113 @@
+# Visualization Configuration for StreamBazaar
+
+# General plot settings
+plot:
+  figsize:
+    width: 12
+    height: 8
+  dpi: 300
+  background_color: white
+  grid: true
+  grid_alpha: 0.3
+
+# Font settings
+font:
+  family: sans-serif
+  size: 14
+  title_size: 16
+  label_size: 14
+  legend_size: 12
+  tick_size: 16
+
+# Colorblind-friendly color palette
+colors:
+  palette: colorblind
+  primary: "#0072B2"  # blue
+  secondary: "#E69F00"  # orange
+  tertiary: "#009E73"  # green
+  quaternary: "#CC79A7"  # pink
+  quinary: "#D55E00"  # reddish
+  senary: "#56B4E9"  # sky blue
+  septenary: "#F0E442"  # yellow
+
+# Line plot settings
+line_plot:
+  linewidth: 1
+  markersize: 8
+  alpha: 0.8
+  # Different line styles for distinction
+  line_styles:
+    - "-"
+    - "--"
+    - "-."
+    - ":"
+  # Different markers for distinction
+  markers:
+    - "o"
+    - "s"
+    - "^"
+    - "D"
+    - "v"
+    - "<"
+    - ">"
+    - "p"
+    - "*"
+    - "h"
+
+# Bar plot settings
+bar_plot:
+  alpha: 0.8
+  edgecolor: black
+  linewidth: 0.5
+  # Patterns for bar distinction (colorblind-friendly)
+  patterns:
+    - ""
+    - "///"
+    - "..."
+    - "\\"
+    - "|||"
+    - "---"
+    - "+++"
+    - "xxx"
+    - "ooo"
+    - "***"
+
+# Box plot settings
+box_plot:
+  patch_artist: true
+  alpha: 0.7
+  # Patterns for box distinction (colorblind-friendly)
+  patterns:
+    - ""
+    - "///"
+    - "..."
+    - "\\"
+    - "|||"
+    - "---"
+    - "+++"
+    - "xxx"
+    - "ooo"
+    - "***"
+  flierprops:
+    marker: "o"
+    markerfacecolor: none
+    markersize: 5
+    alpha: 0.7
+
+# Legend settings
+legend:
+  location: upper right
+  frameon: true
+  fancybox: true
+  shadow: true
+  ncol: 1
+  fontsize: 12
+
+# Output settings
+output:
+  format:
+    - png
+    - pdf
+  save_individual_subplots: true
+  save_legend_separately: true
+  directory: output/

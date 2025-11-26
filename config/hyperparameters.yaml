@@ -1,0 +1,38 @@
+# Hyperparameters Configuration for StreamBazaar
+
+# Auction parameters
+auction:
+  interval: 1.0  # seconds
+  min_bid_increment: 0.01
+  price_smoothing: 0.7
+  target_utilization: 0.8
+  backpressure_sensitivity: 2.0
+
+# Currency parameters
+currency:
+  decay_rate: 0.05  # per minute
+  base_allocation: 100.0
+  priority_weight_factor: 1.0
+  utilization_reward_factor: 0.5
+
+# Pricing parameters
+pricing:
+  spot_price_factor: 1.0
+  over_utilization_aggressiveness: 1.0
+  under_utilization_reduction: 0.5
+
+# Preemption parameters
+preemption:
+  checkpoint_timeout: 10.0  # seconds
+  state_transfer_bandwidth: 100.0  # MB/s
+  migration_buffer_size: 1000  # records
+
+# Resource parameters
+resources:
+  cpu_weight: 1.0
+  memory_weight: 1.0
+  network_weight: 1.0
+
+# Evaluation parameters
+evaluation:
+  metrics_collection_interval: 5.0  # seconds
